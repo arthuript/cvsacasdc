@@ -1,0 +1,11 @@
+name: CI
+
+on: [push, workflow_dispatch]  # Permite que o workflow seja disparado manualmente
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run script build
+        run: build.sh
